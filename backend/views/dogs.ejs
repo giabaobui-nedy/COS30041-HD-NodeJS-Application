@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HD Project</title>
+</head>
+
+<body>
+    <h1>HD Project</h1>
+    <% if (dogs.length> 0) { %>
+        <h2>All Dogs</h2>
+        <ul>
+            <% dogs.forEach(function(dog) { %>
+                <li>
+                    <h3>
+                        <%= dog.name %>
+                    </h3>
+                    <ul>
+                        <li>
+                            <strong>dogId:</strong>
+                            <%= dog.dogId %>
+                        </li>
+                        <li>
+                            <strong>name:</strong>
+                            <%= dog.name %>
+                        </li>
+                        <li>
+                            <strong>breed:</strong>
+                            <%= dog.breed %>
+                        </li>
+                        <li>
+                            <strong>age:</strong>
+                            <%= dog.age %>
+                        </li>
+                        <li>
+                            <strong>characteristic:</strong>
+                            <%= dog.characteristic %>
+                        </li>
+                        <li>
+                            <strong>price:</strong>
+                            <%= dog.price %>
+                        </li>
+                        <li>
+                            <strong>isAvailable:</strong>
+                            <%= dog.isAvailable %>
+                        </li>
+                        <li>
+                            <strong>isSold:</strong>
+                            <%= dog.isSold %>
+                        </li>
+                        <li>
+                            <strong>description:</strong>
+                            <%= dog.description %>
+                        </li>
+                    </ul>
+                </li>
+                <% }) %>
+        </ul>
+        <% } else { %>
+            <p>No dogs available.</p>
+            <% } %>
+</body>
+
+</html>
